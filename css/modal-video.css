@@ -1,0 +1,477 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+*, body {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {outline: none; }
+a:focus, a:active {outline: none;}
+nav, footer, header, aside {display: block;}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit;font-weight: inherit; }
+
+@font-face {
+  font-family: "Retro-Gaming";
+  src: url('../fonts/Retro-Gaming.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Pixearg";
+  src: url('../fonts/Pixearg.woff') format("woff");
+}
+
+.BTN_Hatoms:before, 
+.BTN_PlayPause:before, 
+.Play:before {
+  content: url('');
+}
+
+.BTN_Hatoms:hover:before, 
+.BTN_PlayPause:hover:before, 
+.Play:hover:before {
+  content: url('');
+}
+
+.BTN_Hatoms:after, 
+.BTN_PlayPause:after, 
+.Play:after {
+  content: none;
+}
+
+.BTN_Hatoms:hover:after, 
+.BTN_PlayPause:hover:after, 
+.Play:hover:after {
+  content: none;
+}
+
+.fa-play:before,
+.fa-pause:before {
+  position: relative;
+  bottom: 14px;
+}
+#app-FolderDoc_5 {
+  position: absolute; 
+  top: 194px; 
+  left: 0px; 
+  right: 0px; 
+  display: none; 
+  max-width: 586px; 
+  width: 100%; 
+  height: 414px; 
+  float: right;  
+}
+.video {
+  box-shadow: 8px 8px 1px #afb8bb;
+  background-color: #D4D4F2;
+  width: 580px;
+  height: 413px;
+  padding: 1px;
+}
+.video__container {
+  background-color: #D4D4F2;
+}
+.video__header {
+  width: 570px;
+  padding: 3px 0 11px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.video__cube {
+  padding: 1px 0;
+}
+.video__lines {
+  width: 178.3px;
+}
+
+.video__line {
+  margin-bottom: 2px;
+  display: block;
+  width: 178.3px;
+  height: 0.14em;
+  background-color: #fff;
+  box-shadow: 2px 2px 1px #000000d4;  
+}
+
+.video__name {
+  padding: 2px 0;
+  font-family: "Retro-Gaming";
+  font-size: 16px;
+  color: #000;
+}
+
+.video__button-exit {
+
+}
+.video__in-window {
+  width: 574px;
+  height: 362px; 
+}
+
+/* Player */
+
+/* Code Couleur */
+/* Police d'écriture */
+/* Transition */
+/* Hatoms Player */
+ .LecteurHatoms {
+  border: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1px;
+  width: 480px;
+  min-width: 573px;
+  min-height: 323px;
+}
+ .LecteurVideo {
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+ .LecteurVideo.AfficherControles .TitreVideo {
+   top: 0;
+}
+ .TitreVideo {
+   display: none;
+}
+ video {
+   max-width: 100%;
+   height: 100%;
+   width: 100%;
+}
+/* Controls Global*/
+ .LecteurVideo .Controls {
+   border: 2px solid #000;
+   width: 573px;
+   position: absolute;
+   bottom: -49px;
+   left: -2px;
+   right: 25px;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   z-index: 100;
+   background-color: #CECDEB;
+   color: rgba(255, 255, 255, 0.8);
+   transition: all ease 0.5s;
+}
+ .LecteurVideo .Controls .ControlsSuperieur {
+   padding: 11px;
+   position: relative;
+   left: 12px;
+}
+/* Controls Superieur */
+ .ControlsSuperieur {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.ControlsInferieur {
+  height: 0;
+}
+.ConteneurBarRange {
+  max-width: 800px;
+  width: 100%;
+}
+ .ControlsSuperieur .TimeCodeCourant, .ControlsSuperieur {
+   font-family: "Pixearg";
+   font-size: 10px;
+   flex-basis: 10%;
+   flex-shrink: 1;
+   display: inline-flex;
+   justify-content: center;
+   color: #000;
+}
+ .TimeCodeFin {
+   opacity: 0;
+   font-family: "Pixearg";
+   font-size: 10px;
+   flex-basis: 10%;
+   flex-shrink: 1;
+   display: inline-flex;
+   justify-content: center;
+   color: #000;
+}
+ .ControlsSuperieur .ConteneurBarRange {
+   position: relative;
+   bottom: 1px;
+   height: 6px;
+   flex-basis: 80%;
+   border-radius: 5px;
+   display: flex;
+}
+ .ControlsSuperieur .ConteneurBarRange .BarRange {
+  border-radius: 0;
+  height: 8px;
+  border: 1px solid #696978;
+  background: #848499;
+  width: 100%;
+  left: 0;
+  position: relative;
+  display: inline-flex;
+}
+/* Controls Inferieur Son */
+ .ControlsInferieur .ControlsVolume {
+   display: inline-flex;
+   align-items: center;
+   flex-basis: 15%;
+   justify-content: space-between;
+}
+ .ControlsInferieur .ControlsVolume .Icone {
+   display: none;
+   margin-right: 0.5rem;
+   font-size: 1.2rem;
+}
+ .ControlsInferieur .ControlsVolume .Icone .BTN_Hatoms {
+   background-color: transparent;
+   outline: 0;
+   border: none;
+   color: #fff;
+   transition: all ease 0.5s;
+}
+ .ControlsInferieur .ControlsVolume .Icone .BTN_Hatoms:hover {
+   cursor: pointer;
+}
+ .ControlsInferieur .ControlsVolume .Icone .BTN_Hatoms:hover .fa {
+   color: #fff;
+}
+ .ControlsInferieur .ControlsVolume .Icone .BTN_Hatoms.Volume .fa-volume-mute {
+   display: none;
+}
+ .ControlsInferieur .ControlsVolume .Icone .BTN_Hatoms.Mute .fa-volume-down {
+   display: none;
+}
+ .ControlsInferieur .ControlsVolume .ConteneurSon {
+   display: none;
+
+   flex-direction: column;
+   flex-basis: 80%;
+}
+ .ControlsInferieur .ControlsVolume .ConteneurSon .ConteneurInfo {
+   display: inline-flex;
+   justify-content: space-between;
+}
+ .ControlsInferieur .ControlsVolume .ConteneurSon .ConteneurInfo .Label, .ControlsInferieur .ControlsVolume .ConteneurSon .ConteneurInfo .Pourcentage {
+   font-size: 0.8rem;
+   color: rgba(255, 255, 255, 0.8);
+   text-transform: capitalize;
+}
+ .ControlsInferieur .ControlsVolume .ConteneurSon .ConteneurBarRange {
+   margin-top: 2px;
+   display: inline-flex;
+   height: 5px;
+   flex-basis: 100%;
+   background-color: rgba(0, 0, 0, 0.6);
+   position: relative;
+}
+ .ControlsInferieur .ControlsVolume .ConteneurSon .ConteneurBarRange .BarRange {
+   height: 100%;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.6);
+   border-radius: 2px;
+}
+/* Controls Inferieur Controls Video */
+ .ControlsInferieur .ControlsVideo {
+   flex-basis: 70%;
+   display: inline-flex;
+   justify-content: space-evenly;
+}
+ .ControlsInferieur .ControlsVideo .BTN_Hatoms {
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    font-size: 2rem;
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    color: #fff;
+    transition: all ease 0.5s;
+}
+ .ControlsInferieur .ControlsVideo .BTN_Hatoms:hover:enabled {
+   cursor: pointer;
+}
+ .ControlsInferieur .ControlsVideo .BTN_Hatoms:hover:enabled .fa {
+  position: relative;
+  color: #fff;
+}
+ .ControlsInferieur .ControlsVideo .BTN_Hatoms.Play .fa-pause {
+   display: none;
+}
+ .ControlsInferieur .ControlsVideo .BTN_Hatoms.Pause .fa-play {
+   display: none;
+}
+ .ControlsInferieur .ControlsVideo .BTN_Hatoms.VideoPrecedente, .ControlsInferieur .ControlsVideo .BTN_Hatoms.VideoSuivante {
+   font-size: 1.5rem;
+}
+/* Controls Inferieur Plein Ecran */
+ .ControlsInferieur .ControlsPleinEcran {
+   flex-basis: 15%;
+   display: inline-flex;
+   justify-content: flex-end;
+}
+ .ControlsInferieur .ControlsPleinEcran .PleinEcran {
+   font-size: 1.2rem;
+   border: none;
+   background-color: transparent;
+   color: #fff;
+   outline: 0;
+}
+ .ControlsInferieur .ControlsPleinEcran .PleinEcran:hover {
+   cursor: pointer;
+}
+ .ControlsInferieur .ControlsPleinEcran .PleinEcran:hover .fa {
+   color: #fff;
+}
+.fa-play:before {
+    width: 10px;
+    content: "\f04b";
+    width: 6%;
+    font-size: 10px;
+    color: #000;
+}
+.fa-pause:before {
+    content: "\f04c";
+    font-size: 12px;
+    color: #000;    
+}
+/* Entrer de type Range */
+ .BarRange {
+   -webkit-appearance: none;
+   width: 100%;
+   height: 15px;
+   border-radius: 5px;
+   background: #B0B0C7;
+   -webkit-transition: 0.2s;
+   transition: opacity 0.2s;
+}
+ .BarRange::-webkit-slider-thumb {
+   display: none;
+   width: 36.21px;
+   height: 8px;
+   border: 2px solid #000;
+   border-radius: 0;
+   background: #E2E2F8;
+   cursor: pointer;
+}
+ .BarRange::-moz-range-thumb {
+   display: none;
+   width: 36.21px;
+   height: 8px;
+   border: 2px solid #000;
+   border-radius: 0;
+   background: #E2E2F8;
+   cursor: pointer;
+}
+/* Gestion de l'affichage Plein Ecran */
+ .LecteurVideo:fullscreen .TitreVideo {
+   font-size: 2rem;
+}
+ .LecteurVideo:fullscreen video {
+   height: 100%;
+   width: 100%;
+}
+ .LecteurVideo:fullscreen .ControlsSuperieur .TimeCodeCourant, .LecteurVideo:fullscreen .ControlsSuperieur .TimeCodeFin {
+   font-size: 1.8rem;
+}
+ .LecteurVideo:fullscreen .ControlsInferieur .ControlsVolume .Icone {
+   font-size: 3rem !important;
+}
+ .LecteurVideo:fullscreen .ControlsInferieur .ControlsVolume .ConteneurSon .ConteneurInfo .Label, .LecteurVideo:fullscreen .ControlsInferieur .ControlsVolume .ConteneurSon .ConteneurInfo .Pourcentage {
+   font-size: 1.5rem !important;
+}
+ .LecteurVideo:fullscreen .ControlsInferieur .BTN_Hatoms {
+   font-size: 3rem;
+}
+ .VideoSuivante:disabled {
+   cursor: none;
+}
+ .VideoSuivante:disabled .fa {
+   color: rgba(0, 0, 0, 0.6);
+}
+ .VideoPrecedente:disabled {
+   cursor: none;
+}
+ .VideoPrecedente:disabled .fa {
+   color: rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (max-width: 563px) {
+
+  #app-FolderDoc_5 {
+    max-width: 332px;
+    width: 100%;
+    height: 278px;  
+  }
+  .video {
+    width: 326px;
+    height: 271px;
+  }
+  .video__in-window {
+    width: 318px;
+    height: 237px;
+  }
+  .LecteurHatoms {
+    width: 318px;
+    height: 180px;
+
+    min-width: 0;
+    min-height: 0;  
+  }
+  .LecteurVideo .Controls {
+    border: 1px solid #000;
+    width: 318px;
+  } 
+  .ControlsSuperieur .ConteneurBarRange {
+    flex-basis: 70%;
+  }
+  .LecteurVideo .Controls .ControlsSuperieur {
+    padding: 11px 22px;
+  }
+  .video__header {
+    width: 318px;
+  }
+  .video__name {
+    font-size: 13px;
+  }  
+  .video__lines {
+    width: 70px;
+  }  
+  .video__line {
+    width: 64px;
+  } 
+  .video__name h2 {
+    margin-top: 5px;
+  } 
+  #app-FolderDoc_3 {
+
+  }
+
+}
+

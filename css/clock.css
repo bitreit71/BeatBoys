@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+*, body {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {outline: none; }
+a:focus, a:active {outline: none;}
+nav, footer, header, aside {display: block;}
+
+html, body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit;font-weight: inherit; }
+
+@font-face {
+  font-family: "Retro-Gaming";
+  src: url('../fonts/Retro-Gaming.woff') format("woff");
+}
+
+
+.clock {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  width: 100%;
+  color: #fff;
+}
+
+#Date {
+  padding: 9px 0 0 0;
+  width: 246px;
+  font-family: "Retro-Gaming";
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+
+ul {
+  border-left: 1px solid #CECDEB;
+  border-right: 1px solid #CECDEB;
+  width: 112px;
+  padding-top: 8px;
+  margin: 0 auto;
+  height: 27px;
+  list-style: none;
+  text-align: center;
+}
+
+ul li {
+  display: inline;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Retro-Gaming";
+  color: #000;
+}
+
+#point {
+  position:relative;
+  -moz-animation:mymove 1s ease infinite;
+  -webkit-animation:mymove 1s ease infinite;
+}
+
+@-webkit-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+}
+
+@-moz-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+}
+
+@media only screen and (max-width: 608px) {
+
+  #Date {
+    display: none;
+  }
+
+  ul {
+    width: 62px;
+  }
+
+}
+
+@media only screen and (max-width: 507px) {
+
+  .header__h1 {
+    display: none;
+  }
+
+  .header__desc {
+    max-width: 409px;
+    width: 100%;
+    height: 28px;
+  }
+
+}

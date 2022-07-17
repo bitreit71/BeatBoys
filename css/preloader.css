@@ -1,0 +1,510 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+*, body {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {outline: none; }
+a:focus, a:active {outline: none;}
+nav, footer, header, aside {display: block;}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit;font-weight: inherit; }
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  src: url('../fonts/Montserrat-Regular.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Retro-Gaming";
+  src: url('../fonts/Retro-Gaming.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Pixearg";
+  src: url('../fonts/Pixearg.woff') format("woff");
+}
+
+  body {
+    background: #161633;
+    font-family: "Retro-Gaming";
+    font-size: 14px;
+    line-height: 20px;
+    color: #D4D4F2;
+    margin: 0;
+    
+  }
+
+.header__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px; 
+}
+
+      .main {
+        max-width: 1100px;
+        width: 100%;
+      }
+      .screen {
+        display: block;
+        width: var(--width, 1024px);
+        height: var(--height, 768px);
+        position: relative;
+        padding: 25px;
+      }
+      .brand-text {
+        padding-right: 34px;
+      }
+      .brand-text img {
+        width: 58px;
+        height: 32px;
+        margin-right: 18px;
+      } 
+      .brand-text__top-container {
+        display: flex;
+        margin-bottom: 34px;
+      }
+      .tele-text {
+        display: flex;
+        justify-content: space-between;
+      }
+      .tele-text__left {
+        margin-right: 17px;
+        text-align: center;
+        width: 42%;
+      }
+      .tele-text__right {
+        width: 100%;
+      } 
+      .brand-text_2 {
+        display: none;
+      }
+      main {
+        padding: 0 34px 0 34px;
+        position: relative;
+        z-index: 1;
+      }
+      .start-up__button {
+        font-family: "Retro-Gaming";
+        font-size: 12px;
+        color: #D4D4F2;
+        padding: 0 0;
+        border: 1px solid #D4D4F2;
+        padding: 12px 32px;
+        width: 163px;
+        height: 40px;
+      }
+      .start-up__button:active {
+        font-family: "Retro-Gaming";
+        font-size: 12px;
+        padding: 0 0;
+        background-color: #D4D4F2;
+        color: #161633;
+        border: 1px solid #D4D4F2;
+        padding: 12px 32px;
+        width: 163px;
+        height: 40px;
+      }      
+      .epa {
+        width: 154px;
+        height: 91px;        
+        opacity: 1;
+        transition: opacity 1s linear;
+      }
+      .epa.fadeoff {
+        opacity: 0;
+      }
+      .upper {
+        margin-bottom: 32px;
+      }
+      .bottom-text {
+        padding-top: 434px;
+      }
+      footer {
+        margin-top: 7px;        
+        display: flex;
+        justify-content: space-between;
+        padding: 0 37px 36px 37px;
+      }
+      strong {
+        color: #fff;
+        font-weight: normal;
+      }
+      p.line {
+        margin: 0;
+      }
+      .off {
+        visibility: hidden;
+      }
+      .pre {
+        white-space: pre;
+      }
+      .last {
+        position: absolute;
+        bottom: 0;
+      }
+      .hdd {
+        margin-bottom: 50px;
+      }
+      .cursor {
+        width: 12px;
+        display: inline-block;
+        border-bottom: 2px solid #c1c1c1;
+        animation: blink 1s steps(1) infinite;
+      }
+      @keyframes blink {
+        0%, 50% { opacity: 1 }
+        50%, 100% { opacity: 0 }
+      } 
+
+      /*progress*/
+
+#wrap {
+  display: flex;
+  position: relative;
+  top: 106px;
+}
+.line  {
+  color: #fff;
+  font-size: 11px;
+} 
+.line-ipad  {
+  display: none;
+  color: #fff;
+  font-size: 11px;  
+}
+.line-mobile  {
+  display: none;
+  color: #fff;
+  font-size: 11px;  
+} 
+#text {
+  font-family: "Pixearg";
+  font-size: 10px;
+  color: #fff;
+  width: 34px;
+  height: auto;
+  position: relative;
+}
+#text-2 {
+  font-family: "Retro-Gaming";
+  font-size: 14px;
+  color: #D4D4F2;
+  width: 34px;
+  height: auto;
+  position: relative;
+}      
+
+      .tree {
+        position: relative;
+      }
+
+      .load {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .load > .bg {
+          position: absolute;
+          width: 476px;
+          height: 128px;
+          background: #161633;
+          top: 0;
+          left: 10px;
+          -webkit-animation-name: hello;
+          -webkit-animation-duration: 7s;
+          -webkit-animation-fill-mode: forwards;
+          animation-name: hello;
+          animation-duration: 7s;
+          animation-fill-mode: forwards;
+      }
+
+      .load img {
+          position: relative;
+          bottom: 11px;
+          z-index: -1;
+          width: 470px;
+          height: 348px;
+      }
+
+      @keyframes hello {
+        0% {
+            position: relative;
+            top: 115px;
+        }
+        100% {
+            position: relative;
+            top: 0px;
+        }
+      }
+
+      @-webkit-keyframes hello {
+        0% {
+            position: relative;
+            top: 325px;
+        }
+        100% {
+            position: relative;
+            top: 0px;
+        }
+      }
+
+@media only screen and (max-width: 1097px) {
+
+  .bottom-text {
+      padding: 384px 66px 0 0;
+  }
+
+}
+
+@media only screen and (max-width: 813px) {
+
+  .bottom-text {
+      padding: 343px 25px 0 0;
+  }
+
+}
+
+@media only screen and (max-width: 709px) {
+
+  footer {
+    display: block;
+    position: relative;
+    top: 43px;
+  }
+
+  .bottom-text {
+    position: relative;
+    z-index: 1111; 
+    top: 329px;   
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    padding: 0 47px;
+  }
+
+  .load-progress {
+    position: relative;
+    bottom: 88px;
+  }
+
+  .tree {
+    margin: 0 auto;    
+    width: 78%;
+    position: relative;
+    bottom: 18px;
+  }
+
+  .load img {
+    display: block;
+    margin: 0 auto;
+    width: 263px;
+    height: 195px;
+  }
+
+  .line {
+    display: none;
+  } 
+
+  .line-ipad {
+    display: block;
+    color: #fff;
+    font-size: 11px;  
+  }
+
+}
+
+@media only screen and (max-width: 681px) {
+
+  footer {
+      top: 0;
+  }
+
+  .bottom-text__left {
+    position: relative;
+    bottom: 31px;
+  }
+
+  .load-progress {
+    position: relative;
+    bottom: 97px;  
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .brand-text_2 {
+    display: block;
+  }
+
+  .brand-text_2 img {
+    margin-right: 25px;
+    height: 100%;
+  } 
+  .brand-text__top-container_2 {
+    margin-bottom: 52px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tele-text_2 {
+
+  }
+  .tele-text__p-2 {
+    margin-bottom: 32px;
+  }
+  .tele-text__left-2 {
+    width: 92%;
+    text-align: center;
+  }
+  .tele-text__right-2 {
+
+  }    
+  .tele-text_2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+@media only screen and (max-width: 611px) {
+
+  .epa {
+    width: 95px;
+    height: 56px;
+  }
+
+  .line-ipad {
+    display: none;
+  }  
+
+  .line-mobile {
+    display: block;
+    color: #fff;
+    font-size: 11px;  
+  }
+
+  footer {
+    top: 14px;
+  }
+
+}
+
+@media only screen and (max-width: 420px) {
+
+  .brand-text__top-container_2 {
+    margin-bottom: 0;
+  }
+
+  .brand-text img {
+    margin-bottom: 33px;
+    height: 100%;
+  } 
+
+  .brand-text_2 p {
+    text-align: left;
+  } 
+
+  .brand-text__top-container_2 {
+  }
+
+  .bottom-text {
+    padding: 0;
+    top: 291px;
+  }
+
+  .bottom-text__left p {
+    text-align: left;
+  } 
+
+  .load img {
+    width: 197px;
+    height: 159px;
+  }
+
+  .tele-text_2 {
+
+  }
+
+  .tele-text__left-2 {
+    margin-bottom: 28px;
+  }
+
+  p {
+    text-align: center;
+  } 
+
+  .load-progress {
+    position: relative;
+    bottom: 92px;
+  }  
+
+  footer {
+    padding: 0 37px 35px 37px;
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+  .epa {
+    width: 73px;
+    height: 42px;
+  }
+
+  .header__info {
+    padding: 34px 23px;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  .load img {
+    width: 192px;
+    height: 153px;
+  }
+
+  .header__info {
+    padding: 27px 23px;
+  }
+
+}
+
+
+
+  
+
+
+ 
